@@ -1,0 +1,9 @@
+Flask==2.3.3
+Flask-Login==0.7.0
+Flask-Mail==0.9.1
+Flask-Babel==3.1.0
+Flask-Migrate==4.0.4
+Flask-SQLAlchemy==3.0.3
+pytest==7.4.2
+pytest-flask==1.0.0
+click==8.1.7
