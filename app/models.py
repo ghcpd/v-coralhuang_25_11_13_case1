@@ -1,0 +1,20 @@
+"""
+Application database models.
+"""
+
+from flask_sqlalchemy import SQLAlchemy
+from flask_login import UserMixin
+
+db = SQLAlchemy()
+
+
+class User(db.Model, UserMixin):
+    """User model with locale preference."""
+
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(64), unique=True, index=True)
+    email = db.Column(db.String(120), unique=True, index=True)
+    locale = db.Column(db.String(8), default=None)
+
+    def __repr__(self):
+        return "<User {}>".format(self.username)
